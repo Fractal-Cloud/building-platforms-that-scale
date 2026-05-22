@@ -42,10 +42,10 @@ They live in `src/test` for two reasons. First, they double as **unit tests for 
 
 The book builds on five concepts that map 1:1 to types in this repo:
 
-1. **Bounded Context** — a governance scope grouping Fractals, LiveSystems, and Environments (personal or organizational).
-2. **Fractal** — a reusable infrastructure pattern composed of a **Blueprint** (what is fixed) and an **Interface** (what consumers can specialize).
-3. **LiveSystem** — a customer's running instantiation of a Fractal.
-4. **Component → Service → Offer** — the three-level catalogue hierarchy. Components are abstract contracts, Services are delivery models, Offers are concrete vendor-specific implementations.
+1. **Bounded Context** — a governance scope grouping Fractals, LiveSystems, and putting them in relation with Environments (personal or organizational).
+2. **Fractal** — a reusable infrastructure pattern composed of a **Blueprint** (what is fixed) and an **Interface** (what consumers can use to specialize the Blueprint).
+3. **LiveSystem** — a running instance of a Fractal.
+4. **Component → Service → Offer** — the three-level catalogue hierarchy. Components are abstract contracts, Services are specific capabilities combined with delivery models, Offers are concrete vendor-specific implementations.
 5. **Parameters / Dependencies / Links** — the three distinct ways components describe themselves and relate to each other.
 
 The book unpacks each of these step by step, with worked examples that map directly to the code in this repo.
