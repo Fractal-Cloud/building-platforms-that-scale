@@ -24,3 +24,11 @@ hs_err_pid*
 replay_pid*
 
 .idea
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven (legacy)
+target/
