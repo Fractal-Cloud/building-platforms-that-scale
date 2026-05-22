@@ -47,7 +47,10 @@ tasks.withType<JavaCompile>().configureEach {
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
     jvmArgs("--enable-preview")
-    failOnNoDiscoveredTests = false
+    testLogging {
+        events("passed", "skipped", "failed")
+        showStandardStreams = false
+    }
 }
 
 tasks.withType<Javadoc>().configureEach {

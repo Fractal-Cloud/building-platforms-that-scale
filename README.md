@@ -34,7 +34,7 @@ Each role from the book has its own package:
 - **`ccoe/`** — examples produced by a **Cloud Center of Excellence** team authoring Fractals: `AwsSimpleLandingZone`, `GcpSimpleLandingZone`, `AwsThreeTierApplication`, plus shared `BoundedContexts`, `Environments`, `Constants`.
 - **`devteam/`** — examples produced by a **Dev team** consuming Fractals: `SalesApp` and its `BoundedContexts` / `Constants`.
 
-These are sample classes used to walk through chapters — they are **not** JUnit tests. The `test` source set is used purely so the samples can reference the SDK without ending up on the published artifact.
+They live in `src/test` for two reasons. First, they double as **unit tests for the SDK** — one of the book's recurring points is that infrastructure-as-code becomes testable when expressed as a typed model rather than templates, and these examples exercise the SDK in exactly that way. Second, they reference the SDK without ending up on the published artifact.
 
 ---
 
@@ -48,7 +48,7 @@ The book builds on five concepts that map 1:1 to types in this repo:
 4. **Component → Service → Offer** — the three-level catalogue hierarchy. Components are abstract contracts, Services are delivery models, Offers are concrete vendor-specific implementations.
 5. **Parameters / Dependencies / Links** — the three distinct ways components describe themselves and relate to each other.
 
-If any of that sounds opaque, that's the point — the book walks you through it. Read it.
+The book unpacks each of these step by step, with worked examples that map directly to the code in this repo.
 
 ---
 
@@ -59,7 +59,7 @@ Requires **JDK 25**. The Gradle wrapper handles everything else.
 ```bash
 ./gradlew build       # compile main + test, build sources + javadoc jars
 ./gradlew compileJava # main only
-./gradlew test        # run the test task (no @Test methods — succeeds cleanly)
+./gradlew test        # run JUnit 5 tests
 ./gradlew clean
 ```
 
